@@ -9,19 +9,6 @@ terraform {
   }
 }
 
-# terraform {
-#   backend "s3" {
-#     # Replace this with your bucket name!
-#     bucket         = "terraform-state-mgmt-test-bucket"
-#     key            = "stage/services/webserver-cluster/terraform.tfstate"
-#     region         = "us-east-2"
-
-#     # Replace this with your DynamoDB table name!
-#     dynamodb_table = "terraform-state-locks"
-#     encrypt        = true
-#   }
-# }
-
 resource "aws_launch_configuration" "example" {
   image_id        = "ami-0fb653ca2d3203ac1"
   instance_type   = "t2.micro"
